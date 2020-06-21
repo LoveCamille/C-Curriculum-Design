@@ -51,7 +51,7 @@ int main(void) {
             //载入功能（1～3）（已经完成调试）
             case 1:
                 //创建类型链表并导入
-                fp_sort = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆分类信息表.csv", "r");
+                fp_sort = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆分类信息表.csv", "r");
                 sort_head = CarSortInfo_CSV_Load(fp_sort);
                 fclose(fp_sort);
                 getchar();getchar();
@@ -59,7 +59,7 @@ int main(void) {
             
             case 2:
                 //创建车辆链表并导入
-                fp_car = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息表.csv", "r");
+                fp_car = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息表.csv", "r");
                 car_head = CarBasicInfo_CSV_Load(fp_car);
                 fclose(fp_car);
                 getchar();getchar();
@@ -67,7 +67,7 @@ int main(void) {
                 
             case 3:
                 //创建订单链表并导入
-                fp_order = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/租车订单信息表.csv", "r");
+                fp_order = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/租车订单信息表.csv", "r");
                 car_head = RentOrderInfo_CSV_Load(car_head, fp_order);
                 fclose(fp_order);
                 getchar();getchar();
@@ -163,7 +163,7 @@ int main(void) {
                 
             case 17:
                 //查询车辆信息
-                fp_car = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息查询结果.csv", "r+");
+                fp_car = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息查询结果.csv", "r+");
                 printf("请选择查找方式：\n1.准确查找（ 可选择三个指标 ）\n2.组合查找（ 不需要的内容请输入# ）\n");
                 scanf("%d", &op);getchar();
                 switch (op) {
@@ -253,7 +253,7 @@ int main(void) {
             //导出数据（22～24）（已经完成调试）
             case 22:
                 //操作类型链表导出数据
-                fp_sort = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆分类信息表.csv", "r+");
+                fp_sort = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆分类信息表.csv", "r+");
                 CarSortInfo_CSV_Output(sort_head, fp_sort);
                 fclose(fp_sort);
                 getchar();getchar();
@@ -261,7 +261,7 @@ int main(void) {
                 
             case 23:
                 //操作车辆信息导出数据
-                fp_car = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息表.csv", "r+");
+                fp_car = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/车辆基本信息表.csv", "r+");
                 CarBasicInfo_CSV_Output(car_head, fp_car);
                 fclose(fp_car);
                 getchar();getchar();
@@ -269,7 +269,7 @@ int main(void) {
                 
             case 24:
                 //操作订单链表导出数据
-                fp_order = fopen("/Users/jiangshuqi/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/租车订单信息表.csv", "r+");
+                fp_order = fopen("/Users/Documents/C语言程序文件夹/汽车租凭信息管理系统/汽车租凭信息管理系统/Data/租车订单信息表.csv", "r+");
                 RentOrderInfo_CSV_Output(car_head, fp_order);
                 fclose(fp_order);
                 getchar();getchar();
